@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/add_pessoas.css" %}'>
+    <script src="https://kit.fontawesome.com/cd2bf27834.js" crossorigin="anonymous"></script>
+    <title>visitantes</title>
+<body>
+<header>
+<div class="logo">
+    Semente de <span>Luz</span></div>
+    <ul>
+        <li><a href="{%url 'home' %}">Home</li></a><!--página inicial-->
+        <li><a href="/estoque/escolha">Banco de Dados</li></a><!--Banco de dados-->
+        <li><a href="/estoque/language/"> Idioma</li></a><!--Explicando sobre a ong-->
+        <li>
+            <a href="/estoque/perfil">{{request.user}}</a>
+        </li> 
+    </ul>
+</header>
+
+<br>
+
+<body>
+    <h1>Formulário para Visitantes</h1>
+
+    <form method="POST" id="form" class="form"> {% csrf_token %}>
+        <div class="card">
+            
+            <div class="textfield">
+                <label for="nome"><i class="fa-solid fa-user"></i> {{ form.nome.label }}  </label>
+                <input type="text" placeholder="Nome Completo" {{ form.nome }}
+            </div>
+
+            <div class="textfield">
+                <label for="e-mail"><i class="fa-solid fa-envelope"></i> {{ form.email.label }} </label>
+                <input type="text" placeholder="E-mail" {{ form.email }}
+            </div>
+
+            <div class="textfield">
+                <label for="telefone"><i class="fa-solid fa-phone"></i> {{ form.telefone.label }} </label>
+                <input type="text" placeholder="Telefone" {{ form.telefone }}
+            </div>
+
+            <div class="textfield">
+                <label for="Data"><i class="fa-solid fa-calendar"></i> {{ form.dt_ingresso.label }}</label>
+                <input type="date" placeholder="Data" {{ form.dt_ingresso }}
+            </div>
+
+            <div class="textfield">
+                <label for="vencimento"><i class="fa-regular fa-calendar"></i> {{ form.dt_nasct.label }}</label>
+                <input type="date" placeholder="Data" {{ form.dt_nasct }}
+            </div>
+
+            <div class="textfield">
+                <label for="CPF"><i class="fa-solid fa-hashtag"></i> {{ form.cpf.label }}</label>
+                <input type="text" placeholder="CPF" {{ form.cpf }}
+            </div>
+
+
+            <div class="textfield">
+                {{ form.sexo.label }}
+                {{ form.sexo }}
+                
+            </div>
+
+            <button class="btn" type="submit">salvar</button>
+        </div>
+    </form>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <h3>Semente de Luz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam debitis recusandae fugiat commodi omnis assumenda hic unde eius quidem, sunt aliquid officia voluptas odio veritatis sequi, iusto perferendis maiores obcaecati.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2022 Cetec. designed by <span>Arthur João and Gustavo</span></p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/cadastro.css" %}'>
+    <script src="https://kit.fontawesome.com/cd2bf27834.js" crossorigin="anonymous"></script>
+    <title>cadastro</title>
+</head>
+<body>
+
+
+    <div class="titulo"><h1>Cadastrar-se</h1></div>
+
+        <form method="POST" action="" id="form" class="form"> 
+            {% csrf_token %}
+            <div class="painel">
+
+                <div class="textfield">
+                    <label for="nome"><i class="fa-solid fa-user"></i>     {{form.first_name.label}}</label>
+                    {{form.first_name}}
+                </div>
+        
+                <div class="textfield">
+                    <label for="sobrenome"><i class="fa-solid fa-user"></i>     {{form.last_name.label}}</label>
+                    {{form.last_name}}
+                </div>
+
+                <div class="textfield">
+                    <label for="username"><i class="fa-regular fa-user"></i>    {{form.username.label}}</label>
+                    {{form.username}}
+                </div>
+                
+                <div class="textfield">
+                    <label for="email"><i class="fa-solid fa-envelope"></i>     {{form.email.label}}</label>
+                    {{form.email}}
+                </div>
+
+                <div class="textfield">
+                    <label for="senha"><i class="fa-solid fa-lock"></i>     {{form.password1.label}}</label>
+                    {{form.password1}}
+                </div>
+
+                <div class="textfield">
+                    <label for="senha"><i class="fa-solid fa-lock"></i>    {{form.password2.label}}</label>
+                    {{form.password2}}
+                </div>
+
+                <input class="botao" type="submit">
+
+                <div class="msg">
+                    <p>{{ form.errors }}</p>
+                </div> <!--mensangem erro-->
+
+            </div>     
+        </form>
+    </div>
+
+</body>
+</html>

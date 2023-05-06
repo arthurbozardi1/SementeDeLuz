@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/perfil.css" %}'>
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Semente de <span>Luz</span></div>
+            <ul>
+                <li><a href="{%url 'home' %}">Home</li></a><!--página inicial-->
+                <li><a href="/estoque/escolha">Banco de Dados</li></a><!--Banco de dados-->
+                <li><a href="/estoque/language/"> Idioma</li></a><!--Explicando sobre a ong-->
+                 
+            </ul>
+    </header>
+
+    <br>
+    
+    <h1>Perfil</h1>
+    <div class="card">
+        <div class="up">
+            <div class="img">
+            <img img src={% static "img/user.png" %}>
+            
+            </div>
+        </div>
+
+        <div class="down">
+            <h2>{{user.first_name}} {{user.last_name}}</h2>
+            <h3>Usuário: <lu>{{user.username}}</lu></h3>
+            <h3>Nome: <lu>{{user.first_name}}</lu></h3>
+            <h3>Sobrenome: <lu>{{user.last_name}}</lu></h3>
+            <h3>E-mail: <lu>{{user.email}}</lu></h3>
+            <h3> Não é você? <a href="/estoque/logout">Desconectar</a></h3>
+
+            <h3></h3>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Semente de Luz</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam debitis recusandae fugiat commodi omnis assumenda hic unde eius quidem, sunt aliquid officia voluptas odio veritatis sequi, iusto perferendis maiores obcaecati.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 Cetec. designed by <span>Arthur João and Gustavo</span></p>
+        </div>
+    </footer>
+</body>
+</html>

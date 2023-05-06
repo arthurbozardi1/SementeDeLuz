@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/add_estoque.css" %}'>
+    <script src="https://kit.fontawesome.com/cd2bf27834.js" crossorigin="anonymous"></script>
+    <title>Roupa de cama</title>
+</head>
+<body>
+<header>
+<div class="logo">
+    Semente de <span>Luz</span></div>
+    <ul>
+        <li><a href="{%url 'home' %}">Home</li></a><!--página inicial-->
+        <li><a href="/estoque/escolha">Banco de Dados</li></a><!--Banco de dados-->
+        <li><a href="/estoque/language/"> Idioma</li></a><!--Explicando sobre a ong-->
+        <li>
+            <a href="/estoque/perfil">{{request.user}}</a>
+        </li> 
+    </ul>
+</header>
+
+<br>
+
+<body>
+    <h1>Formulário para Roupas de Cama</h1>
+    <form method="POST" id="form" class="form"> {% csrf_token %}>
+        <div class="card">
+            
+            <div class="textfield">
+
+                {{ form.tipos.label }} 
+                {{ form.tipos }}
+            </div>
+
+            <div class="textfield">
+                <label for="tipo"><i class="fa-solid fa-comment"></i> {{ form.descr.label }}  </label>
+                <input type="text" placeholder="Expecifique ou Outros" {{ form.descr }}
+            </div>
+            
+            <div class="textfield">
+                <label for="tipo"><i class="fa-solid fa-comment"></i> {{ form.cor.label }}  </label>
+                <input type="text" placeholder="Cor" {{ form.cor }}
+            </div>
+
+            <div class="textfield">
+                <label for="tipo"><i class="fa-solid fa-weight-scale"></i> {{ form.qntd.label }}  </label>
+                <input type="text" placeholder="Quantidade" {{ form.qntd }}
+            </div>
+
+
+            <div class="textfield">
+                <label for="tmn"><i class="fa-solid fa-list-ol"></i> {{ form.tamanho.label }} </label>
+                {{ form.tamanho }}
+            </div>
+
+            <div class="textfield">
+
+                <label for="Qualidade"><span>{{ form.condicao.label }}  </span> </label>
+                {{ form.condicao }}
+            </div>
+
+            <button class="btn" type="submit">salvar</button>
+        </div>
+    </form>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <h3>Semente de Luz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam debitis recusandae fugiat commodi omnis assumenda hic unde eius quidem, sunt aliquid officia voluptas odio veritatis sequi, iusto perferendis maiores obcaecati.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2022 Cetec. designed by <span>Arthur João and Gustavo</span></p>
+    </div>
+</footer>
+
+</html>

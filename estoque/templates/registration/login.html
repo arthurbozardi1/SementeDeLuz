@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/login.css" %}'>
+    <script src="https://kit.fontawesome.com/cd2bf27834.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>FAÇA LOGIN AGORA<br>- Um projeto CETEC</h1>
+            <div class="img">
+            <img src={% static "img/logo.png" %} alt="" class="img">
+            </div>
+        </div>
+        
+        <div class="right-login"></div>
+        <form id="form" class="form" method="post" action ="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario"> <p class="fa-solid fa-user"></p> {{form.username.label_tag}}</label>
+                    <input placeholder="Usuário" {{form.username}} 
+                </div>
+                
+                <div class="textfield">
+                    <label for="senha"> <p class="fa-solid fa-lock"></p> {{ form.password.label_tag }}</label>
+                    <input placeholder="Senha" {{ form.password }} 
+                    
+                </div>
+                <button class="btn-login" type="submit">Login</button>
+                <div class="ou">ou</div><br>
+                
+                <div class="conta"><a href="/estoque/cadastro"><h4>Crie uma conta</h4></div></a>
+                
+
+                <div>
+                {% for message in messages %}
+                    <h2 id="messages">{{message}}</h2>
+                {% endfor %}
+                </div>
+            </div> 
+        </form>
+        </div>
+        
+    </div>
+
+    
+  <footer>
+    <div class="footer-content">
+        <h3>Semente de Luz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam debitis recusandae fugiat commodi omnis assumenda hic unde eius quidem, sunt aliquid officia voluptas odio veritatis sequi, iusto perferendis maiores obcaecati.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2022 Cetec. designed by <span>Arthur João and Gustavo</span></p>
+    </div>
+</footer>  
+</body>
+</html>

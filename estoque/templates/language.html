@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/language.css" %}'>
+    <script src="https://kit.fontawesome.com/cd2bf27834.js" crossorigin="anonymous"></script>
+    <title>Language</title>
+</head>
+<body>
+    <div class="main-page">
+        <div class="esquerda">
+            <h1>Bem-Vindo</h1><br>
+        </div>
+
+        <form action ="/" method="get" id="form" class="form"> {% csrf_token %}
+        <div>
+            
+            <select class="menu" id="Idioma" required>
+                <option selected disabled value="">Selecione</option>
+                <option>Português</option>
+                <option disabled value="">English (development)</option>
+                <option disabled value="">Español (desarrollo)</option>
+            </select>
+        </div>
+        <button class="btn" type="submit">ok</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Semente de Luz</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam debitis recusandae fugiat commodi omnis assumenda hic unde eius quidem, sunt aliquid officia voluptas odio veritatis sequi, iusto perferendis maiores obcaecati.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 Cetec. designed by <span>Arthur João and Gustavo</span></p>
+        </div>
+    </footer>
+</body>
+</html>

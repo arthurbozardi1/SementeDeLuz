@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/escolha.css" %}'>
+    <script src="https://kit.fontawesome.com/cd2bf27834.js" crossorigin="anonymous"></script>
+    <title>escolha</title>
+</head>
+
+<header>
+    <div class="logo">
+        Semente de <span>Luz</span></div>
+        <ul>
+            <li><a href="{%url 'home' %}">Home</li></a><!--página inicial-->
+            
+            <li><a href="/estoque/language/">Idioma</li></a><!--Explicando sobre a ong-->
+            <li>
+                <a href="/estoque/perfil">{{request.user}}</a>
+            </li> 
+        </ul>
+</header>
+
+<body>
+
+    <br>
+
+<div class="texto">
+    <h1>Gerenciar Estoque e Cadastro</h1>
+
+    <br>
+
+    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat voluptatem provident deleniti ipsum aliquam, delectus hic sit repellat eveniet autem non nihil architecto obcaecati, quod quas, fugit magnam optio voluptate!</h3>
+</div>
+    <div class="geral">
+
+    <div class="container">
+        <h2>Consultar e Adicionar Estoque:</h2>
+        <a href="/estoque/opcaoestoque"<button type="button">
+            <img src={% static "img/estoque.jpg" %} alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">ESTOQUE</div>
+            </div>
+            </button></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dicta dolorem ut reprehenderit accusantium, quos amet corporis sint fuga commodi doloremque autem, recusandae modi veritatis tenetur tempore pariatur dolor aut.</p>
+      </div>
+
+      <div class="container">
+        <h2>Consultar e Adicionar Cadastros:</h2>
+        <a href="/estoque/opcaopessoas"<button type="button">
+            <img src={% static "img/cadastro.jpg" %} alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">CADASTROS</div>
+            </div>
+            </button></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dicta dolorem ut reprehenderit accusantium, quos amet corporis sint fuga commodi doloremque autem, recusandae modi veritatis tenetur tempore pariatur dolor aut.</p>
+      </div>
+
+    </div>
+</body> 
+
+<footer>
+    <div class="footer-content">
+        <h3>Semente de Luz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam debitis recusandae fugiat commodi omnis assumenda hic unde eius quidem, sunt aliquid officia voluptas odio veritatis sequi, iusto perferendis maiores obcaecati.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2022 Cetec. designed by <span>Arthur João and Gustavo</span></p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/home.css" %}'>
+    <script src="https://kit.fontawesome.com/cd2bf27834.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<header>
+    <div class="logo">Semente de <span>Luz</span></div>
+    <ul>
+        
+        <li>
+            <a href="/estoque/escolha">Banco de Dados</li></a><!--Banco de dados-->
+        <li><a href="/estoque/language/">Idioma</li></a><!--Explicando sobre a ong-->
+        <li>
+            <a href="/estoque/perfil">{{request.user}}</a>
+        </li> 
+    </ul>
+</header>
+
+<br>
+
+<body>
+    <section class="sobre">
+        <h1>Centro Espírita <br> Semente de <span>Luz</span></h1>
+        
+        <br>
+        
+        <h2>O Projeto:   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quam pariatur voluptates adipisci doloribus, omnis voluptatem cumque voluptatum magni assumenda reiciendis? Reiciendis, quo nemo similique minima deleniti corporis debitis suscipit!</span></h2>
+        <div class="imagens">
+            <img src={% static "img/imagem1.png" %} class="img1" alt="">
+            <img src={% static "img/imagem2.jpg" %} class="img2" alt="">
+        </div>
+        <h3>Endereço: <span> R. Pinheiro Machado, 1246 - Nossa Sra. de Lourdes, Caxias do Sul - RS, 95020-170.</span></h2>
+        <br>
+        <br>
+        <div class="extra"> 
+            <h2>Banco de Dados</h2>
+
+            <br>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus molestiae fugiat rem consequuntur cum soluta earum deserunt iste dolorem magnam dicta necessitatibus fugit repellendus quibusdam cumque perspiciatis placeat, quidem tempora?</p>
+            
+        </div>
+        <div class="botao">
+            <a href="/estoque/escolha">
+                <button> Manutenção do Banco de Dados</button>
+            </a>
+        </div>
+
+        
+    </section>
+</body>
+
+
+<footer>
+    <div class="footer-content">
+        <h3>Semente de Luz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam debitis recusandae fugiat commodi omnis assumenda hic unde eius quidem, sunt aliquid officia voluptas odio veritatis sequi, iusto perferendis maiores obcaecati.</p>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/Lula/"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/jairbolsonaro"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://fazerpergunta.com/biblioteca/artigo/read/255361-o-que-era-a-bula-syllabus"><i class="fa-brands fa-google"></i></a></li>
+            <li><a href="https://www.youtube.com/c/AdrianoBoladoOficial"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2022 Cetec. designed by <span>Arthur João e Gustavo</span></p>
+    </div>
+</footer>
+</html>

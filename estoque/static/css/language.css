@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.main-page{
+    width: 100vw;
+    height: 100vh;
+    background: #020e46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerda{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: flex-start;
+    color: #F49F1C;
+    font-size: 30px;
+}
+
+.btn{
+    width: 50%;
+    padding: 16px 0px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase ;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #3a556e;
+    background: #F49F1C;
+    cursor: pointer;
+    box-shadow: 0px 10px 40 px -12px #9e6d25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.menu{
+    margin-bottom: 1em;
+    background-color: #3a556e;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.menu{
+    width: 353px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 120px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000073;
+    font-size: 20px;
+    cursor: pointer
+}
+
+footer{
+    background-color: #000c17;
+    height: auto;
+    /*width: 100vw;tirar*/
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: rgb(31, 31, 31);
+}
+
+.footer-bottom{
+    background: black;
+    /*width: 100vw; tirar*/
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #F49F1C;
+}
+
+.footer-bottom   span{
+       opacity: .4;
+    font-weight: 200;
+}
